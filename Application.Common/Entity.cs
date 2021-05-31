@@ -11,8 +11,6 @@ namespace Application.Common
     public class Entity
     {
         private long id;
-
         public long Id { get {  return this.id; } set  { this.id = value; } }
-
     }
 }

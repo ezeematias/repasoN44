@@ -4,12 +4,16 @@ using System.Linq;
 using Application.Exceptions;
 using Application.DataAcces;
 using Application.Models;
+using Application.Common;
+
 
 namespace Application.Repositories
 {
     public class CustomerRepository : RepositoryBase<Customer>
     {
         private static List<Customer> customers;
+
+        public static List<Customer> Customers { get => customers; set => customers = value; }
 
         #region -- Los datos no se encuentran guardados más que en memoria --
 
@@ -59,9 +63,10 @@ namespace Application.Repositories
         public override List<Customer> GetAll()
         {
             // Devuelve una nueva lista ordenada
-            //TODO: resolver el error
-            
-            return customers.ToList();
+            //TODO: resolver el error          
+            List<Customer> aux = new List<Customer> (Customers);
+            aux.Sort();
+            return aux;
         }
         public List<Customer> GetAll(string path)
         {
@@ -73,13 +78,13 @@ namespace Application.Repositories
         public override Customer GetById(long entityId)
         {
             // TODO: implementar
-            //throw new NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public override void Remove(Customer entity)
         {
             // TODO: implementar
-            //throw new NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public override void Update(Customer entity)

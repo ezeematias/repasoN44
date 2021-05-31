@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Application.Common\Application.Common.csproj">
-      <Project>{532B3886-E825-457D-A362-D2D6B62C5281}</Project>
+      <Project>{532b3886-e825-457d-a362-d2d6b62c5281}</Project>
       <Name>Application.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Application.Files\Application.Files.csproj">

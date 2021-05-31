@@ -7,7 +7,7 @@ using Application.Common;
 
 namespace Application.Models
 {
-    public class Customer : Entity
+    public class Customer : Entity 
     {
         private string name;
         private string lastName;
@@ -22,7 +22,7 @@ namespace Application.Models
         {
 
         }
-        public Customer(string name, string lastName, int age)
+        public Customer(string name, string lastName, int age) 
         {
             this.name = name;
             this.lastName = lastName;
