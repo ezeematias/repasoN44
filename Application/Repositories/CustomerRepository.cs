@@ -73,20 +73,20 @@ namespace Application.Repositories
         public override Customer GetById(long entityId)
         {
             // TODO: implementar
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public override void Remove(Customer entity)
         {
             // TODO: implementar
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public override void Update(Customer entity)
         {
 
             // TODO: implementar
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public List<Customer> LoadFromFile(string path)

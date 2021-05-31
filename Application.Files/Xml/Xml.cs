@@ -12,6 +12,15 @@ namespace Application.Files.Xml
 {
     public class Xml<T> : IFile<T>
     {
-       //TODO implementar IFile
+        //TODO implementar IFile
+        public bool Read(string file, out T data)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Save(string file, T data)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

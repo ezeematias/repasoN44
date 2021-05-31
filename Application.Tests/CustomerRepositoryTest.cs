@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using Application.Repositories;
 using Application.Models;
+using Application.Common;
 
 namespace Application.Tests
 {

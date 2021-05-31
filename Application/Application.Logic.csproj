@@ -49,6 +49,10 @@
     <Compile Include="CustomerSerializer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Application.Files\Application.Files.csproj">
+      <Project>{9d9384e1-3d03-436c-8bca-87eb963c278d}</Project>
+      <Name>Application.Files</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Application.Models\Application.Models.csproj">
       <Project>{fab8b881-7bc0-4aef-9888-2f7eed2da536}</Project>
       <Name>Application.Models</Name>

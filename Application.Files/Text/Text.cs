@@ -10,5 +10,14 @@ namespace Application.Files.Text
     public class Text<T> : IFile<T>
     {
         //TODO implementar IFile
+        public bool Read(string file, out T data)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Save(string file, T data)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

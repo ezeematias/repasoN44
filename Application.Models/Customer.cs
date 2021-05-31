@@ -16,6 +16,8 @@ namespace Application.Models
         public int Age { get { return this.age; } set { this.age = value; } }
         public string LastName { get { return this.lastName; } set { this.lastName = value; } }
 
+        public long Id { get; set; }
+
         public Customer()
         {
 

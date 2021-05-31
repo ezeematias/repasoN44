@@ -13,5 +13,6 @@ namespace Application.Common
         private long id;
 
         public long Id { get {  return this.id; } set  { this.id = value; } }
+
     }
 }
