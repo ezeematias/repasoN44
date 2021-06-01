@@ -78,19 +78,35 @@ namespace Application.Repositories
         public override Customer GetById(long entityId)
         {
             // TODO: implementar
-            throw new NotImplementedException();
+            Customer aux = new Customer(); 
+            foreach (Customer item in Customers)
+            {
+                if(item.Id == entityId) 
+                {
+                    aux = item;
+                }
+            }
+            return aux;
+           // throw new NotImplementedException();
         }
 
         public override void Remove(Customer entity)
         {
             // TODO: implementar
-            throw new NotImplementedException();
+            if(Customers == entity)
+            {
+                Customers.Remove(entity);
+            }
+            //throw new NotImplementedException();
         }
 
         public override void Update(Customer entity)
         {
-
             // TODO: implementar
+            if(Customers != entity)
+            {
+                Customers.Add(entity);
+            }
             //throw new NotImplementedException();
         }
 

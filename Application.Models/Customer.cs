@@ -15,14 +15,13 @@ namespace Application.Models
         public string Name { get { return this.name; } set { this.name = value; } }
         public int Age { get { return this.age; } set { this.age = value; } }
         public string LastName { get { return this.lastName; } set { this.lastName = value; } }
+               
 
-        public long Id { get; set; }
-
-        public Customer()
+        public Customer() : base()
         {
 
         }
-        public Customer(string name, string lastName, int age) 
+        public Customer(string name, string lastName, int age) : this()
         {
             this.name = name;
             this.lastName = lastName;
