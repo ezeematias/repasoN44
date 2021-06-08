@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using Application.Exceptions;
+using Application.DataAccess;
 using Application.DataAcces;
 using Application.Models;
 using Application.Common;
+
 
 
 namespace Application.Repositories
@@ -20,8 +22,9 @@ namespace Application.Repositories
         static CustomerRepository()
         {
             // Carga de 100 clientes de forma predeterminada
-            customers = new List<Customer>();
 
+            customers = new List<Customer>();
+            /*
             for (int i = 0; i < 20; i++)
             {
                 var customer = new Customer();
@@ -32,6 +35,7 @@ namespace Application.Repositories
 
                 customers.Add(customer);
             }
+            */
         }
 
         #endregion
@@ -63,13 +67,21 @@ namespace Application.Repositories
         public override List<Customer> GetAll()
         {
             // Devuelve una nueva lista ordenada
-            //TODO: resolver el error          
+            //TODO: resolver el error
+            //
+            /*
             List<Customer> aux = new List<Customer> (Customers);
             aux.Sort();
+            
             return aux;
+            */
+            Customers = DataAccess.DataAccess.GetCustomers();
+            return Customers;
         }
+
         public List<Customer> GetAll(string path)
         {
+
             CustomerSerializer customerSerializer = new CustomerSerializer();
             customers.AddRange(customerSerializer.Read(path));
             return customers;

@@ -21,11 +21,11 @@ namespace Application.Models
         {
 
         }
-        public Customer(string name, string lastName, int age) : this()
+        public Customer(string name, string lastName, int age) : base()
         {
             this.name = name;
             this.lastName = lastName;
-            this.age = age;
+            this.age = age;   
         }
 
         public static bool operator ==(List<Customer> customers, Customer customer)
